@@ -1,0 +1,4 @@
+FastAPI
+httpx
+lxml
+uvicorn

@@ -1,0 +1,14 @@
+services:
+  fastapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./config.ini:/config.ini
+
+      # - ./app:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: always
