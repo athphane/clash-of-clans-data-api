@@ -2,8 +2,8 @@ from fastapi import FastAPI, HTTPException, status, Request
 from uvicorn.middleware.proxy_headers import ProxyHeadersMiddleware
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.routers import traps_router
-
+from app.routers.barracks import barracks_router
+from app.routers.traps import traps_router
 
 app = FastAPI()
 app.add_middleware(
@@ -16,6 +16,7 @@ app.add_middleware(
 app.add_middleware(ProxyHeadersMiddleware, trusted_hosts="*")
 
 app.include_router(traps_router)
+app.include_router(barracks_router)
 
 
 @app.get("/")

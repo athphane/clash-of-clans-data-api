@@ -1,1 +1,0 @@
-from .traps import router as traps_router
