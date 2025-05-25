@@ -63,7 +63,24 @@ def open_ai_tool_json():
                     "parameters": [],
                     "deprecated": False
                 }
-            }
+            },
+            "/spells/spells_all_info": {
+                "get": {
+                    "description": "Get all the information about a spell in CSV format. The name of the spell should be written properly as a noun, e.g., 'Lightning Spell' or 'Healing Spell'.",   
+                    "operationId": "GetSpellAllInfo",
+                    "parameters": [
+                        {
+                            "name": "spell_name",
+                            "in": "query",
+                            "required": True,
+                            "schema": {
+                                "type": "string"
+                            }
+                        }
+                    ],
+                    "deprecated": False
+                }
+            },
         },
         "components": {
             "schemas": {}

@@ -9,6 +9,13 @@ from app.routers.traps import scrape_the_table
 from support.wiki_urls import wiki_urls
 from support.wiki_urls import troops as troop_names
 
+class TableType(str, Enum):
+    details = "details"
+    stats = "stats"
+
+
+table_type_map = {"details": 0, "stats": 1}
+
 barracks_router = APIRouter(
     # prefix=
 )
@@ -25,13 +32,6 @@ async def bomb_stats_csv():
 
     return Response(csv_data, media_type='text/csv')
 
-
-class TableType(str, Enum):
-    details = "details"
-    stats = "stats"
-
-
-table_type_map = {"details": 0, "stats": 1}
 
 @barracks_router.get("/barracks/troops")
 async def get_list_all_troops():
