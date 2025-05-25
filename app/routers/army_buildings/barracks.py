@@ -6,8 +6,6 @@ from app.routers.traps import scrape_the_table
 from support.helpers import check_for_cache, get_cache_file_name
 from support.wiki_urls import wiki_urls, troops
 
-table_type_map = {"details": 0, "stats": 1}
-
 barracks_router = APIRouter(
     prefix="/barracks",
 )
@@ -16,17 +14,20 @@ barracks_router = APIRouter(
 @barracks_router.get("/", operation_id='BarracksStats')
 async def barracks():
     THING = 'barracks'
-    if check_for_cache(THING, 'stats'):
-        with open(get_cache_file_name(THING, 'stats'), "r", encoding="utf-8") as f:
+    if check_for_cache(THING, TableType.stats):
+        with open(get_cache_file_name(THING, TableType.stats), "r", encoding="utf-8") as f:
             csv_data = f.read()
     else:
-        csv_data = await scrape_the_table(THING, 'stats')
+        csv_data = await scrape_the_table(THING, TableType.stats)
 
     return Response(csv_data, media_type='text/csv')
 
 
 @barracks_router.get("/troops", operation_id='GetAllTroops')
 async def get_list_all_troops():
+    """
+    Get a list of all troops available
+    """
     return {
         "troops": troops,
     }

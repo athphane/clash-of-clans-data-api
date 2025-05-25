@@ -5,11 +5,12 @@ import httpx
 from fastapi import HTTPException
 from lxml import html
 
+from app.enums import TableType
 from support.helpers import get_cache_file_name
 from support.wiki_urls import wiki_urls
 
 
-async def scrape_the_table(wiki_key: str, return_table: str = 'stats') -> str:
+async def scrape_the_table(wiki_key: str, return_table: TableType) -> str:
     """
     Scrapes a specific table from a Wikipedia page, converts it to CSV, and caches the result.
 
@@ -23,7 +24,6 @@ async def scrape_the_table(wiki_key: str, return_table: str = 'stats') -> str:
     Raises:
         HTTPException: If the page cannot be fetched or the required table is not found.
     """
-    print(return_table)
     wiki_url = wiki_urls[wiki_key]['url']
     return_table_idx = wiki_urls[wiki_key]['tables'].get(return_table)
 

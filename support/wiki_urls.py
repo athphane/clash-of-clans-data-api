@@ -246,6 +246,13 @@ wiki_urls = {
             "stats": 1,
         }
     },
+
+    'army_camp': {
+        "url": "https://clashofclans.fandom.com/wiki/Army_Camp",
+        "tables": {
+            "stats": 0
+        }
+    },
 }
 
 troops = {

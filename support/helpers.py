@@ -1,5 +1,7 @@
 import os
 
+from app.enums import TableType
+
 
 def get_cache_file_name(file_name: str, table: str) -> str:
     """
