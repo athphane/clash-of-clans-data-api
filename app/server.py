@@ -24,6 +24,52 @@ def index(request: Request):
     return {"Hello": "World"}
 
 
+@app.get('/openai.json')
+def open_ai_tool_json():
+    return {
+        "openapi": "3.1.0",
+        "info": {
+            "title": "Clash of Clans Data API",
+            "description": "An API that provides data about Clash of Clans, including troops, buildings, and traps and more.",
+            "version": "v1.0.0"
+        },
+        "servers": [
+            {
+            "url": "https://clash-of-clans-data-api.athfan.dev"
+            }
+        ],
+        "paths": {
+            "/barracks/troop_all_info": {
+                "get": {
+                    "description": "Get all information about a troop in CSV format. The name of the troop should be written properly as a noun, e.g., 'Barbarian' or 'Archer'.",   
+                    "operationId": "GetTroopInfoAll",
+                    "parameters": [
+                        {
+                            "name": "troop_name",
+                            "in": "query",
+                            "required": True,
+                            "schema": {
+                                "type": "string"
+                            }
+                        }
+                    ],
+                    "deprecated": False
+                }
+            },
+            "/barracks/troops": {
+                "get": {
+                    "description": "Get list of all troops available in Clash of Clans.",   
+                    "operationId": "ListAllTroops",
+                    "parameters": [],
+                    "deprecated": False
+                }
+            }
+        },
+        "components": {
+            "schemas": {}
+        }
+}
+
 @app.get("/admin")
 def admin():
     raise HTTPException(

@@ -2,8 +2,8 @@ wiki_urls = {
     "bomb": {
         "url": "https://clashofclans.fandom.com/wiki/Bomb",
         "tables": {
-            "details": 0,
-            "stats": 1
+            "details": 1,
+            "stats": 0
         }
     },
     "spring_trap": {
@@ -154,7 +154,98 @@ wiki_urls = {
             "details": 0,
             "stats": 1
         }
-    }
+    },
+    
+    'minion': {
+        "url": "https://clashofclans.fandom.com/wiki/Minion",
+        "tables": {
+            "details": 0,
+            "stats": 1,
+            "super": 2
+        }
+    },
+    'hog_rider': {
+        "url": "https://clashofclans.fandom.com/wiki/Hog_Rider",
+        "tables": {
+            "details": 0,
+            "stats": 1,
+            "super": 2
+        }
+    },
+    'valkyrie': {
+        "url": "https://clashofclans.fandom.com/wiki/Valkyrie",
+        "tables": {
+            "details": 0,
+            "stats": 1,
+            "super": 2
+        }
+    },
+    'golem': {
+        "url": "https://clashofclans.fandom.com/wiki/Golem",
+        "tables": {
+            "details": 0,
+            "stats": 1,
+        }
+    },
+    'witch': {
+        "url": "https://clashofclans.fandom.com/wiki/Witch",
+        "tables": {
+            "details": 0,
+            "stats": 1,
+            "super": 2
+        }
+    },
+    'lava_hound': {
+        "url": "https://clashofclans.fandom.com/wiki/Lava_Hound",
+        "tables": {
+            "details": 0,
+            "stats": 1,
+            "super": 2
+        }
+    },
+    'bowler': {
+        "url": "https://clashofclans.fandom.com/wiki/Bowler",
+        "tables": {
+            "details": 0,
+            "stats": 1,
+            "super": 2
+        }
+    },
+    'ice_golem': {
+        "url": "https://clashofclans.fandom.com/wiki/Ice_Golem",
+        "tables": {
+            "details": 0,
+            "stats": 1,
+        }
+    },
+    'headhunter': {
+        "url": "https://clashofclans.fandom.com/wiki/Head_Hunter",
+        "tables": {
+            "details": 0,
+            "stats": 1,
+        }
+    },
+    'apprentice_warden': {
+        "url": "https://clashofclans.fandom.com/wiki/Apprentice_Warden",
+        "tables": {
+            "details": 0,
+            "stats": 1,
+        }
+    },
+    'druid': {
+        "url": "https://clashofclans.fandom.com/wiki/Druid",
+        "tables": {
+            "details": 0,
+            "stats": 1,
+        }
+    },
+    'furnace': {
+        "url": "https://clashofclans.fandom.com/wiki/Furnace",
+        "tables": {
+            "details": 0,
+            "stats": 1,
+        }
+    },
 }
 
 troops = {
@@ -176,4 +267,17 @@ troops = {
     'electro_titan': 'Electro_Titan',
     'root_rider': 'Root_Rider',
     'thrower': 'Thrower',
+    
+    'minion': 'Minion',
+    'hog_rider': 'Hog_Rider',
+    'valkyrie': 'Valkyrie',
+    'golem': 'Golem',
+    'witch': 'Witch',
+    'lava_hound': 'Lava_Hound',
+    'bowler': 'Bowler',
+    'ice_golem': 'Ice_Golem',
+    'headhunter': 'Head_Hunter',
+    'apprentice_warden': 'Apprentice_Warden',
+    'druid': 'Druid',
+    'furnace': 'Furnace',
 }

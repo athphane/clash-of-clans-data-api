@@ -7,7 +7,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./cache:/cache
+      - ./cache:/app/cache
       - ./config.ini:/config.ini
     environment:
       - PYTHONUNBUFFERED=1
