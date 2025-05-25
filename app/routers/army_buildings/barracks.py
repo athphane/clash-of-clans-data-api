@@ -4,7 +4,7 @@ from starlette.responses import FileResponse
 from app.enums import TableType, Troops
 from app.routers.traps import scrape_the_table
 from support.helpers import check_for_cache, get_cache_file_name
-from support.wiki_urls import wiki_urls
+from support.wiki_urls import wiki_urls, troops
 
 table_type_map = {"details": 0, "stats": 1}
 
@@ -13,7 +13,7 @@ barracks_router = APIRouter(
 )
 
 
-@barracks_router.get("/")
+@barracks_router.get("/", operation_id='BarracksStats')
 async def barracks():
     THING = 'barracks'
     if check_for_cache(THING, 'stats'):
@@ -25,14 +25,14 @@ async def barracks():
     return Response(csv_data, media_type='text/csv')
 
 
-@barracks_router.get("/troops")
+@barracks_router.get("/troops", operation_id='GetAllTroops')
 async def get_list_all_troops():
     return {
-        "troops": list(Troops),
+        "troops": troops,
     }
 
 
-@barracks_router.get("/troop_all_info")
+@barracks_router.get("/troop_all_info", operation_id='GetAllTroopsInfo')
 async def get_troop_info(troop_name: Troops):
     troop_info = ""
 
@@ -55,7 +55,7 @@ async def get_troop_info(troop_name: Troops):
     return Response(troop_info.strip(), media_type="text/csv")
 
 
-@barracks_router.get("/{troop_name}/{table_type}")
+@barracks_router.get("/{troop_name}/{table_type}", operation_id='GetTroopDetails')
 async def get_troop_details(troop_name: Troops, table_type: TableType):
     """
     Get troop general details or statistics in CSV format.
