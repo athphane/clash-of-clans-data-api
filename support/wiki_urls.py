@@ -253,6 +253,121 @@ wiki_urls = {
             "stats": 0
         }
     },
+
+    'spell_factory': {
+        "url": "https://clashofclans.fandom.com/wiki/Spell_Factory",
+        "tables": {
+            "stats": 0
+        }
+    },
+    
+    'lightning_spell': {
+        "url": "https://clashofclans.fandom.com/wiki/Lightning_Spell",
+        "tables": {
+            "details": 0,
+            "stats": 1
+        }
+    },
+    
+    'healing_spell': {
+        "url": "https://clashofclans.fandom.com/wiki/Healing_Spell",
+        "tables": {
+            "details": 0,
+            "stats": 1
+        }
+    },
+    'rage_spell': {
+        "url": "https://clashofclans.fandom.com/wiki/Rage_Spell",
+        "tables": {
+            "details": 0,
+            "stats": 1
+        }
+    },
+    'jump_spell': {
+        "url": "https://clashofclans.fandom.com/wiki/Jump_Spell",
+        "tables": {
+            "details": 0,
+            "stats": 1
+        }
+    },
+    'freeze_spell': {
+        "url": "https://clashofclans.fandom.com/wiki/Freeze_Spell",
+        "tables": {
+            "details": 0,
+            "stats": 1
+        }
+    },
+    'clone_spell': {
+        "url": "https://clashofclans.fandom.com/wiki/Clone_Spell",
+        "tables": {
+            "details": 0,
+            "stats": 1
+        }
+    },
+    'invisibility_spell': {
+        "url": "https://clashofclans.fandom.com/wiki/Invisibility_Spell",
+        "tables": {
+            "details": 0,
+            "stats": 1
+        }
+    },
+    'recall_spell': {
+        "url": "https://clashofclans.fandom.com/wiki/Recall_Spell",
+        "tables": {
+            "details": 0,
+            "stats": 1
+        }
+    },
+    'revive_spell': {
+        "url": "https://clashofclans.fandom.com/wiki/Revive_Spell",
+        "tables": {
+            "details": 0,
+            "stats": 1
+        }
+    },
+    'poison_spell': {
+        "url": "https://clashofclans.fandom.com/wiki/Poison_Spell",
+        "tables": {
+            "details": 0,
+            "stats": 1
+        }
+    },
+    'earthquake_spell': {
+        "url": "https://clashofclans.fandom.com/wiki/Earthquake_Spell",
+        "tables": {
+            "details": 0,
+            "stats": 1
+        }
+    },
+    'haste_spell': {
+        "url": "https://clashofclans.fandom.com/wiki/Haste_Spell",
+        "tables": {
+            "details": 0,
+            "stats": 1
+        }
+    },
+    'skeleton_spell': {
+        "url": "https://clashofclans.fandom.com/wiki/Skeleton_Spell",
+        "tables": {
+            "details": 0,
+            "stats": 1
+        }
+    },
+    'bat_spell': {
+        "url": "https://clashofclans.fandom.com/wiki/Bat_Spell",
+        "tables": {
+            "details": 0,
+            "stats": 1
+        }
+    },
+    'overgrowth_spell': {
+        "url": "https://clashofclans.fandom.com/wiki/Overgrowth_Spell",
+        "tables": {
+            "details": 0,
+            "stats": 1
+        }
+    },
+    
 }
 
 troops = {
@@ -287,4 +402,23 @@ troops = {
     'apprentice_warden': 'Apprentice_Warden',
     'druid': 'Druid',
     'furnace': 'Furnace',
+}
+
+spells = {
+    'lightning_spell': 'Lightning_Spell',
+    'healing_spell': 'Healing_Spell',
+    'rage_spell': 'Rage_Spell',
+    'jump_spell': 'Jump_Spell',
+    'freeze_spell': 'Freeze_Spell',
+    'clone_spell': 'Clone_Spell',
+    'invisibility_spell': 'Invisibility_Spell',
+    'recall_spell': 'Recall_Spell',
+    'revive_spell': 'Revive_Spell',
+    'poison_spell': 'Poison_Spell',
+    'earthquake_spell': 'Earthquake_Spell',
+    'haste_spell': 'Haste_Spell',
+    'skeleton_spell': 'Skeleton_Spell',
+    'bat_spell': 'Bat_Spell',
+    'overgrowth_spell': 'Overgrowth_Spell',
+    
 }

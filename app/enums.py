@@ -1,4 +1,5 @@
 from enum import Enum
+from operator import inv
 
 
 class TableType(str, Enum):
@@ -37,3 +38,20 @@ class Troops(str, Enum):
     apprentice_warden = "apprentice_warden"
     druid = "druid"
     furnace = "furnace"
+
+class Spells(str, Enum):
+    lightning = "lightning_spell"
+    heal = "heal_spell"
+    rage = "rage_spell"
+    jump = "jump_spell"
+    freeze = "freeze_spell"
+    clone = "clone_spell"
+    invisibility = "invisibility_spell"
+    recall = "recall_spell"
+    revive = "revive_spell"
+    poison = "poison_spell"
+    earthquake = "earthquake_spell"
+    haste = "haste_spell"
+    skeleton = "skeleton_spell"
+    bats = "bat_spell"
+    overgrowth = "overgrowth_spell"

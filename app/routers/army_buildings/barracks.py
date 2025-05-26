@@ -33,7 +33,7 @@ async def get_list_all_troops():
     }
 
 
-@barracks_router.get("/troop_all_info", operation_id='GetAllTroopsInfo')
+@barracks_router.get("/troop_all_info", operation_id='GetAllTroopInfo')
 async def get_troop_info(troop_name: Troops):
     troop_info = ""
 
