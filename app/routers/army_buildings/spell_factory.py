@@ -25,6 +25,23 @@ async def spell_factory():
 
     return Response(csv_data, media_type='text/csv')
 
+
+@spell_factory_router.get("/dark_spell_factory", operation_id='DarkSpellFactoryStats')
+async def spell_factory():
+    """
+    Get information about the Dark Spell Factory, what it unlocks and its stats.    
+    """
+
+    THING = 'dark_spell_factory'
+    if check_for_cache(THING, TableType.stats.value):
+        with open(get_cache_file_name(THING, TableType.stats.value), "r", encoding="utf-8") as f:
+            csv_data = f.read()
+    else:
+        csv_data = await scrape_the_table(THING, TableType.stats.value)
+
+    return Response(csv_data, media_type='text/csv')
+
+
 @spell_factory_router.get("/spells", operation_id='GetAllSpells')
 async def get_list_all_spells():
     """
@@ -33,9 +50,13 @@ async def get_list_all_spells():
     return {
         "spells": spells,
     }
+
     
 @spell_factory_router.get("/spell_all_info", operation_id='GetAllSpellInfo')
 async def get_spell_info(spell_name: Spells):
+    """
+    Get all the available information for a specific spell.
+    """
     spell_info = ""
 
     spell_data = wiki_urls.get(spell_name)

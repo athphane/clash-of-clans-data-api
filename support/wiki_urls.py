@@ -368,6 +368,13 @@ wiki_urls = {
         }
     },
     
+    'dark_spell_factory': {
+        "url": "https://clashofclans.fandom.com/wiki/Dark_Spell_Factory",
+        "tables": {
+            "stats": 0
+        }
+    },
+    
 }
 
 troops = {

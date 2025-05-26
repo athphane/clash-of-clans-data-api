@@ -55,3 +55,4 @@ class Spells(str, Enum):
     skeleton = "skeleton_spell"
     bats = "bat_spell"
     overgrowth = "overgrowth_spell"
+    
