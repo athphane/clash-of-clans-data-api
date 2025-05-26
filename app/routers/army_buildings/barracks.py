@@ -23,6 +23,19 @@ async def barracks():
     return Response(csv_data, media_type='text/csv')
 
 
+@barracks_router.get("/dark_barracks", operation_id='DarkBarracksStats')
+async def dark_barracks():
+    THING = 'dark_barracks'
+    if check_for_cache(THING, TableType.stats):
+        with open(get_cache_file_name(THING, TableType.stats), "r", encoding="utf-8") as f:
+            csv_data = f.read()
+    else:
+        csv_data = await scrape_the_table(THING, TableType.stats)
+
+    return Response(csv_data, media_type='text/csv')
+
+
+
 @barracks_router.get("/troops", operation_id='GetAllTroops')
 async def get_list_all_troops():
     """

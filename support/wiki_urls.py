@@ -19,6 +19,14 @@ wiki_urls = {
             "stats": 0
         }
     },
+    
+    "dark_barracks": {
+        "url": "https://clashofclans.fandom.com/wiki/Dark_Barracks",
+        "tables": {
+            "stats": 0
+        }
+    },
+    
     "barbarian": {
         "url": "https://clashofclans.fandom.com/wiki/Barbarian",
         "tables": {
@@ -374,6 +382,14 @@ wiki_urls = {
             "stats": 0
         }
     },
+    
+    'laboratory': {
+        "url": "https://clashofclans.fandom.com/wiki/Laboratory",
+        "tables": {
+            "stats": 0
+        }
+    },
+    
     
 }
 

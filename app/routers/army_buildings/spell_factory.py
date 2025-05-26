@@ -27,7 +27,7 @@ async def spell_factory():
 
 
 @spell_factory_router.get("/dark_spell_factory", operation_id='DarkSpellFactoryStats')
-async def spell_factory():
+async def dark_spell_factory():
     """
     Get information about the Dark Spell Factory, what it unlocks and its stats.    
     """
